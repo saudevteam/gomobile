@@ -98,7 +98,7 @@ func platformTags(platform string) []string {
 		// To help discriminate between darwin, ios, macos, and maccatalyst
 		// targets, there is also a "maccatalyst" tag.
 		return []string{"macos", "maccatalyst"}
-        case "appletvos", "appletvsimulator":
+    case "appletvos", "appletvsimulator":
 		return []string{"appletvos"}
 	case "xros", "xrsimulator":
 		return []string{"xros"}
