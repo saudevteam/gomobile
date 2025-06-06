@@ -98,7 +98,7 @@ func platformTags(platform string) []string {
 		// To help discriminate between darwin, ios, macos, and maccatalyst
 		// targets, there is also a "maccatalyst" tag.
 		return []string{"macos", "maccatalyst"}
-        case "appletvos", "appletvsimulator":Add commentMore actions
+        case "appletvos", "appletvsimulator":
 		return []string{"appletvos"}
 	case "xros", "xrsimulator":
 		return []string{"xros"}
@@ -256,7 +256,7 @@ func envInit() (err error) {
 				if arch == "arm64" {
 					cflags += " -fembed-bitcode"
 				}
-				cflags += " -mmacosx-version-min=" + buildMacOSVersionAdd commentMore actions
+				cflags += " -mmacosx-version-min=" + buildMacOSVersion
 			case "appletvos":
 				goos = "ios"
 				sdk = "appletvos"
@@ -275,7 +275,7 @@ func envInit() (err error) {
 				clang, cflags, err = envClang(sdk)
 				cflags += " -fembed-bitcode"
 			case "xrsimulator":
-				goos = "ios"Add commentMore actions
+				goos = "ios"
 				sdk = "xrsimulator"
 				clang, cflags, err = envClang(sdk)
 				cflags += " -fembed-bitcode"
